@@ -1,0 +1,227 @@
+:root {
+	/* Theme 1  */
+	--window-background-color: #3b4664;
+	--screen-background-color: #182034;
+	--calculator-slider-background-color: #242c43;
+	--key-background-color: #eae3dc;
+	--key-background-hover-color: #ffffff;
+	--key-shadow-color: #b4a597;
+	--equal-key-slider-circle-background-color: #d03f2f;
+	--equal-key-slider-circle-hover-background-color: #f96c5b;
+	--equal-key-shadow-color: #93261a;
+	--reset-del-key-background-color: #637097;
+	--reset-del-key-hover-background-color: #a2b3e1;
+	--reset-del-key-shadow-color: #404e72;
+	--screen-title-text-color: #ffffff;
+	--keys-text-color: #444b5a;
+	--equal-key-text-color: #ffffff;
+	--reset-del-text-color: #ffffff;
+	--equal-key-text-color: #ffffff;
+	--main-key-border-radius: 10px;
+	--main-key-padding: 10px 20px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: "League Spartan", sans-serif;
+}
+
+body {
+	background-color: var(--window-background-color);
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	width: -moz-fit-content;
+	width: fit-content;
+	margin-top: 50px;
+	width: 500px;
+	max-width: 100%;
+	padding: 0 20px;
+}
+
+header {
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+}
+
+header h2 {
+	color: var(--screen-title-text-color);
+}
+
+header .theme-switcher {
+	color: white;
+	display: flex;
+	gap: 5px;
+	align-items: flex-end;
+}
+
+header .theme-switcher .switcher-control .slider {
+	margin-top: 5px;
+	width: 60px;
+	height: 20px;
+	padding: 5px;
+	background-color: var(--calculator-slider-background-color);
+	border-radius: 20px;
+	cursor: pointer;
+	position: relative;
+}
+
+header .theme-switcher .switcher-control .slider .circle {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: var(--equal-key-slider-circle-background-color);
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transition: 0.5s;
+	transform: translate(-50%, -50%);
+}
+
+header .theme-switcher .switcher-control .slider .circle:hover {
+	background-color: var(--equal-key-slider-circle-hover-background-color);
+}
+
+.calculator {
+	max-width: 100%;
+}
+
+.calculator .screen {
+	width: 100%;
+	height: 106.4px;
+	padding: 30px;
+	text-align: right;
+	margin-bottom: 30px;
+	font-size: 50px;
+	font-weight: 700;
+	background-color: var(--screen-background-color);
+	color: var(--screen-title-text-color);
+	border-radius: var(--main-key-border-radius);
+}
+
+.calculator .keys {
+	background-color: var(--calculator-slider-background-color);
+	display: grid;
+	grid-template-columns: repeat(4, 81px);
+	grid-template-rows: repeat(5, 50px);
+	grid-template-areas:
+		"seven eight nine del"
+		"four five six plus"
+		"one two three minus"
+		"period zero divide multi"
+		"reset reset equal equal";
+	gap: 25px;
+	padding: 30px;
+	border-radius: var(--main-key-border-radius);
+}
+
+.calculator .keys .key {
+	cursor: pointer;
+	font-size: 35px;
+	background-color: var(--key-background-color);
+	box-shadow: inset 0px -2px 0px 0px var(--key-shadow-color);
+	font-weight: 700;
+	color: var(--keys-text-color);
+	border-radius: var(--main-key-border-radius);
+	text-align: center;
+	line-height: 1.5;
+	transition: 0.3s;
+}
+
+.calculator .keys .key:hover {
+	background-color: var(--key-background-hover-color);
+}
+
+.calculator .keys .key.zero {
+	grid-area: zero;
+}
+
+.calculator .keys .key.one {
+	grid-area: one;
+}
+
+.calculator .keys .key.two {
+	grid-area: two;
+}
+
+.calculator .keys .key.three {
+	grid-area: three;
+}
+
+.calculator .keys .key.four {
+	grid-area: four;
+}
+
+.calculator .keys .key.five {
+	grid-area: five;
+}
+
+.calculator .keys .key.six {
+	grid-area: six;
+}
+
+.calculator .keys .key.seven {
+	grid-area: seven;
+}
+
+.calculator .keys .key.eight {
+	grid-area: eight;
+}
+
+.calculator .keys .key.nine {
+	grid-area: nine;
+}
+
+.calculator .keys .key.plus {
+	grid-area: plus;
+}
+
+.calculator .keys .key.minus {
+	grid-area: minus;
+}
+
+.calculator .keys .key.multi {
+	grid-area: multi;
+}
+
+.calculator .keys .key.divide {
+	grid-area: divide;
+}
+
+.calculator .keys .key.period {
+	grid-area: period;
+}
+
+.calculator .keys .key.del {
+	grid-area: del;
+}
+
+.calculator .keys .key.reset {
+	grid-area: reset;
+}
+
+.calculator .keys .key.equal-key {
+	background-color: var(--equal-key-slider-circle-background-color);
+	color: var(--equal-key-text-color);
+	box-shadow: inset 0px -2px 0px 0px var(--equal-key-shadow-color);
+	grid-area: equal;
+}
+
+.calculator .keys .key.equal-key:hover {
+	background-color: var(--equal-key-slider-circle-hover-background-color);
+}
+
+.calculator .keys .key.del-reset-key {
+	background-color: var(--reset-del-key-background-color);
+	color: var(--reset-del-text-color);
+	box-shadow: inset 0px -2px 0px 0px var(--reset-del-key-shadow-color);
+}
+
+.calculator .keys .key.del-reset-key:hover {
+	background-color: var(--reset-del-key-hover-background-color);
+}

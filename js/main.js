@@ -98,7 +98,7 @@ function applyTheme(currentTheme) {
 		document.documentElement.style.setProperty('--key-background-hover-color', '#8432af');
 		document.documentElement.style.setProperty('--key-shadow-color', '#871c9c');
 		document.documentElement.style.setProperty('--equal-key-slider-circle-background-color', '#00e0d1');
-		document.documentElement.style.setProperty('--equal-key-slider-circle-hover-background-color', '##94fff9');
+		document.documentElement.style.setProperty('--equal-key-slider-circle-hover-background-color', '#94fff9');
 		document.documentElement.style.setProperty('--equal-key-shadow-color', '#6cf9f2');
 		document.documentElement.style.setProperty('--reset-del-key-background-color', '#58077d');
 		document.documentElement.style.setProperty('--reset-del-key-hover-background-color', '#8631b0');

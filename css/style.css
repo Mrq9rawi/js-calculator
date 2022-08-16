@@ -43,6 +43,13 @@ body {
 	padding: 0 20px;
 }
 
+@media (max-width: 510px) {
+	.container {
+		width: 330px;
+		padding: 0;
+	}
+}
+
 header {
 	margin-bottom: 30px;
 	display: flex;
@@ -131,6 +138,19 @@ header .theme-switcher .switcher-control .slider .circle:hover {
 	text-align: center;
 	line-height: 1.5;
 	transition: 0.3s;
+}
+
+@media (max-width: 510px) {
+	.calculator .keys {
+		grid-template-columns: repeat(4, 60px);
+		gap: 10px;
+		width: fit-content;
+	}
+
+	.calculator .keys .key {
+		font-size: 25px;
+		line-height: 2;
+	}
 }
 
 .calculator .keys .key:hover {
